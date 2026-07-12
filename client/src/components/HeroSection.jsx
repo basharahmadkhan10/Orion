@@ -72,7 +72,7 @@ export const HeroSection = ({ onNavigate }) => {
 
           {/* Center Main Dashboard Mockup Card */}
           <div className="herb-main-mockup">
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '2px solid #E2E8F0', paddingBottom: '16px', marginBottom: '20px', flexWrap: 'wrap', gap: '12px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '2px solid #E2E8F0', paddingBottom: '10px', marginBottom: '12px', flexWrap: 'wrap', gap: '12px' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                 <div style={{ width: '12px', height: '12px', borderRadius: '50%', backgroundColor: '#EF4444' }}></div>
                 <div style={{ width: '12px', height: '12px', borderRadius: '50%', backgroundColor: '#F59E0B' }}></div>
@@ -88,38 +88,38 @@ export const HeroSection = ({ onNavigate }) => {
 
             {/* Embedded Workstation & Metrics Visual */}
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '16px', textAlign: 'left' }}>
-              <div style={{ backgroundColor: '#F8FAFC', border: '2px solid #E2E8F0', borderRadius: '16px', padding: '18px' }}>
+              <div style={{ backgroundColor: '#F8FAFC', border: '2px solid #E2E8F0', borderRadius: '16px', padding: '12px' }}>
                 <div style={{ fontSize: '11px', fontWeight: 700, color: '#64748B', textTransform: 'uppercase' }}>
                   Bullish Growth Thesis
                 </div>
-                <div style={{ fontFamily: 'Space Grotesk, sans-serif', fontSize: '20px', fontWeight: 700, color: '#14532D', margin: '6px 0' }}>
+                <div style={{ fontFamily: 'Space Grotesk, sans-serif', fontSize: '18px', fontWeight: 700, color: '#14532D', margin: '4px 0' }}>
                   Robust Cash Resilience
                 </div>
-                <p style={{ fontSize: '13px', color: '#475569', lineHeight: 1.5 }}>
+                <p style={{ fontSize: '13px', color: '#475569', lineHeight: 1.45 }}>
                   High operating margins and recurring services revenue maintain balance sheet fortification.
                 </p>
               </div>
 
-              <div style={{ backgroundColor: '#F8FAFC', border: '2px solid #E2E8F0', borderRadius: '16px', padding: '18px' }}>
+              <div style={{ backgroundColor: '#F8FAFC', border: '2px solid #E2E8F0', borderRadius: '16px', padding: '12px' }}>
                 <div style={{ fontSize: '11px', fontWeight: 700, color: '#64748B', textTransform: 'uppercase' }}>
                   Adversarial Bear Risk
                 </div>
-                <div style={{ fontFamily: 'Space Grotesk, sans-serif', fontSize: '20px', fontWeight: 700, color: '#7E22CE', margin: '6px 0' }}>
+                <div style={{ fontFamily: 'Space Grotesk, sans-serif', fontSize: '18px', fontWeight: 700, color: '#7E22CE', margin: '4px 0' }}>
                   Regulatory & Valuation Multiple
                 </div>
-                <p style={{ fontSize: '13px', color: '#475569', lineHeight: 1.5 }}>
+                <p style={{ fontSize: '13px', color: '#475569', lineHeight: 1.45 }}>
                   Elevated forward P/E warrants continuous monitoring of antitrust headwinds.
                 </p>
               </div>
 
-              <div style={{ backgroundColor: '#F8FAFC', border: '2px solid #E2E8F0', borderRadius: '16px', padding: '18px' }}>
+              <div style={{ backgroundColor: '#F8FAFC', border: '2px solid #E2E8F0', borderRadius: '16px', padding: '12px' }}>
                 <div style={{ fontSize: '11px', fontWeight: 700, color: '#64748B', textTransform: 'uppercase' }}>
                   Executive Synthesis
                 </div>
-                <div style={{ fontFamily: 'Space Grotesk, sans-serif', fontSize: '20px', fontWeight: 700, color: '#1E293B', margin: '6px 0' }}>
+                <div style={{ fontFamily: 'Space Grotesk, sans-serif', fontSize: '18px', fontWeight: 700, color: '#1E293B', margin: '4px 0' }}>
                   DECISION: INVEST
                 </div>
-                <p style={{ fontSize: '13px', color: '#475569', lineHeight: 1.5 }}>
+                <p style={{ fontSize: '13px', color: '#475569', lineHeight: 1.45 }}>
                   Convergence score verifies downside protection against sector volatility.
                 </p>
               </div>
