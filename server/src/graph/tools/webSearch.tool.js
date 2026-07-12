@@ -49,3 +49,5 @@ export const fetchCompanyNewsAndCatalysts = async (ticker, companyName) => {
     source: "Yahoo Finance Summary Feed",
   };
 };
+
+// Web search tool v1
