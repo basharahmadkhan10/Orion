@@ -35,7 +35,7 @@ const OrionPreloader = ({ onDone }) => {
   return (
     <div style={{
       position: 'fixed', inset: 0, zIndex: 9999,
-      background: '#11231E',
+      background: 'linear-gradient(150deg, #CCFF7F 35%, #11231E 35.2%)',
       display: 'flex', flexDirection: 'column',
       alignItems: 'center', justifyContent: 'center',
       opacity: phase === 'exit' ? 0 : 1,
