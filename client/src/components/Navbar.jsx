@@ -80,3 +80,5 @@ export const Navbar = ({ user, currentView, onNavigate, onLogout }) => {
 };
 
 // Navbar v1
+
+// Navbar smooth scroll v2
