@@ -49,3 +49,5 @@ export const ResearchGraphState = Annotation.Root({
     default: () => ({}),
   }),
 });
+
+// LangGraph state v1
