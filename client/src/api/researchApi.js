@@ -17,3 +17,5 @@ export const getResearchRunById = async (id) => {
   const response = await apiClient.get(`/research/${id}`);
   return response.data?.data;
 };
+
+// Research API v1
