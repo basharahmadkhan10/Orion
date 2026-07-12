@@ -9,3 +9,5 @@ const asyncHandler = (requestHandler) => {
 };
 
 export { asyncHandler };
+
+// asyncHandler utility
