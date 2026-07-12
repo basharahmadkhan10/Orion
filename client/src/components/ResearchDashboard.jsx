@@ -1013,3 +1013,5 @@ export const ResearchDashboard = ({ user, onRequireAuth, initialTicker }) => {
 // Evidence tab v2
 
 // Bull/Bear tabs v3
+
+// Judge panel v4
