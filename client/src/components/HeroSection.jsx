@@ -313,3 +313,5 @@ export const HeroSection = ({ onNavigate }) => {
 };
 
 // HeroSection v1
+
+// Services section v2
