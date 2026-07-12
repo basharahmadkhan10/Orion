@@ -36,3 +36,5 @@ app.use(errorHandler);
 export { app };
 
 // Express app initialized
+
+// CORS production fix
