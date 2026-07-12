@@ -1,0 +1,27 @@
+{
+  "name": "ai-investment-research-backend",
+  "version": "1.0.0",
+  "description": "Adversarial AI Investment Research Desk Backend built with Node.js, Express, ES Modules, MongoDB, and LangGraph.js",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon -r dotenv/config src/index.js"
+  },
+  "dependencies": {
+    "@google/genai": "^2.11.0",
+    "@langchain/core": "^0.3.40",
+    "@langchain/langgraph": "^0.2.44",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.5",
+    "yahoo-finance2": "^2.13.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
