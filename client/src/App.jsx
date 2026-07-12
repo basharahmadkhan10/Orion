@@ -97,16 +97,17 @@ const OrionPreloader = ({ onDone }) => {
 
         {/* Progress bar */}
         <div style={{
-          width: '320px', height: '3px', backgroundColor: 'rgba(17, 35, 30, 0.15)',
+          width: '360px', height: '8px', backgroundColor: 'rgba(17, 35, 30, 0.15)',
           borderRadius: '9999px', margin: '0 auto 16px', overflow: 'hidden',
+          border: '1px solid rgba(17, 35, 30, 0.1)',
         }}>
           <div style={{
             height: '100%',
             width: `${count}%`,
-            background: 'linear-gradient(90deg, #11231E, #047857)',
+            backgroundColor: '#000000',
             borderRadius: '9999px',
             transition: 'width 0.08s linear',
-            boxShadow: '0 0 12px rgba(17, 35, 30, 0.3)',
+            boxShadow: '0 0 8px rgba(0,0,0,0.15)',
           }} />
         </div>
 
