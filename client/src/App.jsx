@@ -64,21 +64,21 @@ const OrionPreloader = ({ onDone }) => {
         }}>
           <div style={{
             width: '52px', height: '52px', borderRadius: '14px',
-            backgroundColor: '#CCFF7F',
+            backgroundColor: '#11231E',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             fontFamily: 'Space Grotesk, sans-serif', fontWeight: 700,
-            fontSize: '20px', color: '#11231E',
-            boxShadow: '0 0 40px rgba(204,255,127,0.4)',
+            fontSize: '20px', color: '#CCFF7F',
+            boxShadow: '0 4px 20px rgba(17, 35, 30, 0.2)',
           }}>AI</div>
           <span style={{
             fontFamily: 'Space Grotesk, sans-serif', fontWeight: 700,
-            fontSize: '42px', color: '#FFFFFF', letterSpacing: '-1px',
+            fontSize: '42px', color: '#11231E', letterSpacing: '-1px',
           }}>ORION</span>
         </div>
 
         <div style={{
           fontFamily: 'Space Grotesk, sans-serif', fontSize: '11px',
-          fontWeight: 700, letterSpacing: '4px', color: 'rgba(204,255,127,0.7)',
+          fontWeight: 700, letterSpacing: '4px', color: 'rgba(17, 35, 30, 0.8)',
           textTransform: 'uppercase', marginBottom: '48px',
         }}>
           Institutional Adversarial Research Platform
@@ -86,42 +86,46 @@ const OrionPreloader = ({ onDone }) => {
 
         {/* Progress bar */}
         <div style={{
-          width: '320px', height: '3px', backgroundColor: 'rgba(255,255,255,0.1)',
+          width: '320px', height: '3px', backgroundColor: 'rgba(17, 35, 30, 0.15)',
           borderRadius: '9999px', margin: '0 auto 16px', overflow: 'hidden',
         }}>
           <div style={{
             height: '100%',
             width: `${count}%`,
-            background: 'linear-gradient(90deg, #047857, #CCFF7F)',
+            background: 'linear-gradient(90deg, #11231E, #047857)',
             borderRadius: '9999px',
             transition: 'width 0.08s linear',
-            boxShadow: '0 0 12px rgba(204,255,127,0.6)',
+            boxShadow: '0 0 12px rgba(17, 35, 30, 0.3)',
           }} />
         </div>
 
         <div style={{
           fontFamily: 'Space Grotesk, sans-serif', fontSize: '12px',
-          fontWeight: 700, color: 'rgba(255,255,255,0.4)', letterSpacing: '2px',
+          fontWeight: 700, color: 'rgba(17, 35, 30, 0.6)', letterSpacing: '2px',
         }}>
           INITIALISING MULTI-AGENT DESK — {count}%
         </div>
       </div>
 
       {/* Corner decorators */}
-      {['topLeft','topRight','bottomLeft','bottomRight'].map((pos) => (
-        <div key={pos} style={{
-          position: 'absolute',
-          top:    pos.includes('top')    ? '24px' : 'auto',
-          bottom: pos.includes('bottom') ? '24px' : 'auto',
-          left:   pos.includes('Left')   ? '24px' : 'auto',
-          right:  pos.includes('Right')  ? '24px' : 'auto',
-          width: '20px', height: '20px',
-          borderTop:    pos.includes('top')    ? '2px solid rgba(204,255,127,0.4)' : 'none',
-          borderBottom: pos.includes('bottom') ? '2px solid rgba(204,255,127,0.4)' : 'none',
-          borderLeft:   pos.includes('Left')   ? '2px solid rgba(204,255,127,0.4)' : 'none',
-          borderRight:  pos.includes('Right')  ? '2px solid rgba(204,255,127,0.4)' : 'none',
-        }} />
-      ))}
+      {['topLeft','topRight','bottomLeft','bottomRight'].map((pos) => {
+        const isTop = pos.includes('top');
+        const borderColor = isTop ? 'rgba(17, 35, 30, 0.3)' : 'rgba(204, 255, 127, 0.4)';
+        return (
+          <div key={pos} style={{
+            position: 'absolute',
+            top:    isTop    ? '24px' : 'auto',
+            bottom: !isTop ? '24px' : 'auto',
+            left:   pos.includes('Left')   ? '24px' : 'auto',
+            right:  pos.includes('Right')  ? '24px' : 'auto',
+            width: '20px', height: '20px',
+            borderTop:    isTop    ? `2px solid ${borderColor}` : 'none',
+            borderBottom: !isTop ? `2px solid ${borderColor}` : 'none',
+            borderLeft:   pos.includes('Left')   ? `2px solid ${borderColor}` : 'none',
+            borderRight:  pos.includes('Right')  ? `2px solid ${borderColor}` : 'none',
+          }} />
+        );
+      })}
     </div>
   );
 };
