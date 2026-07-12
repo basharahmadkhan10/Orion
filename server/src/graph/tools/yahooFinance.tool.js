@@ -171,3 +171,5 @@ export const fetchFinancialData = async (ticker) => {
     };
   }
 };
+
+// Yahoo Finance tool v1
