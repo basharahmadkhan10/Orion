@@ -49,3 +49,5 @@ Return strictly valid JSON with no markdown formatting in this structure:
     },
   };
 };
+
+// Bear agent v1
