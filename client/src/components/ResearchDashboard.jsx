@@ -1019,3 +1019,5 @@ export const ResearchDashboard = ({ user, onRequireAuth, initialTicker }) => {
 // PDF export v5
 
 // Read more modal v6
+
+// Animated research center v7
