@@ -204,3 +204,5 @@ export const refreshAccessToken = asyncHandler(async (req, res) => {
       )
     );
 });
+
+// Auth controller v1
