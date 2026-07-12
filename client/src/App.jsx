@@ -88,7 +88,8 @@ const OrionPreloader = ({ onDone }) => {
 
         <div style={{
           fontFamily: 'Space Grotesk, sans-serif', fontSize: '11px',
-          fontWeight: 700, letterSpacing: '4px', color: 'rgba(17, 35, 30, 0.8)',
+          fontWeight: 800, letterSpacing: '4px', color: '#FFFFFF',
+          textShadow: '0px 1px 3px rgba(17, 35, 30, 0.6)',
           textTransform: 'uppercase', marginBottom: '48px',
         }}>
           Institutional Adversarial Research Platform
@@ -111,7 +112,8 @@ const OrionPreloader = ({ onDone }) => {
 
         <div style={{
           fontFamily: 'Space Grotesk, sans-serif', fontSize: '12px',
-          fontWeight: 700, color: 'rgba(17, 35, 30, 0.6)', letterSpacing: '2px',
+          fontWeight: 800, color: '#FFFFFF', letterSpacing: '2px',
+          textShadow: '0px 1px 3px rgba(17, 35, 30, 0.6)',
         }}>
           INITIALISING MULTI-AGENT DESK — {count}%
         </div>
