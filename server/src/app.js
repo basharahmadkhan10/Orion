@@ -34,3 +34,5 @@ app.use("/api/v1/companies", companyRouter);
 app.use(errorHandler);
 
 export { app };
+
+// Express app initialized
