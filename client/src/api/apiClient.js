@@ -2,7 +2,7 @@ import axios from "axios";
 
 const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api/v1";
 
-// In-memory access token storage (NEVER in localStorage/cookies per user rule)
+
 let inMemoryAccessToken = null;
 
 export const setAccessToken = (token) => {
@@ -15,13 +15,13 @@ export const getAccessToken = () => {
 
 export const apiClient = axios.create({
   baseURL: BASE_URL,
-  withCredentials: true, // Enables sending/receiving httpOnly refreshToken cookie
+  withCredentials: true, 
   headers: {
     "Content-Type": "application/json",
   },
 });
 
-// Request Interceptor: Attach Authorization Bearer token to every API request
+
 apiClient.interceptors.request.use(
   (config) => {
     if (inMemoryAccessToken) {
@@ -32,7 +32,7 @@ apiClient.interceptors.request.use(
   (error) => Promise.reject(error)
 );
 
-// Response Interceptor: Automatic silent token refresh on 401 errors
+
 apiClient.interceptors.response.use(
   (response) => response,
   async (error) => {
@@ -66,6 +66,6 @@ apiClient.interceptors.response.use(
   }
 );
 
-// Axios client v1
 
-// Env-aware API URL v2
+
+

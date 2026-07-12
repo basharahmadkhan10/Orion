@@ -6,16 +6,13 @@ import { WatchlistPage } from './components/WatchlistPage';
 import { AuthPage } from './components/AuthPage';
 import { logoutUser } from './api/authApi';
 
-/* ─────────────────────────────────────────────────
-   ORION PRELOADER  — shows only on the very first
-   page load. Dissolves away after ~2.6 s.
-───────────────────────────────────────────────── */
+
 const OrionPreloader = ({ onDone }) => {
   const [count, setCount] = useState(0);
-  const [phase, setPhase] = useState('enter'); // enter | hold | exit
+  const [phase, setPhase] = useState('enter'); 
 
   useEffect(() => {
-    // Count up 0 → 100 in ~1.8 s
+    
     let n = 0;
     const id = setInterval(() => {
       n += 2;
@@ -27,7 +24,7 @@ const OrionPreloader = ({ onDone }) => {
 
   useEffect(() => {
     if (phase === 'exit') {
-      const t = setTimeout(onDone, 800); // wait for fade-out CSS
+      const t = setTimeout(onDone, 800); 
       return () => clearTimeout(t);
     }
   }, [phase, onDone]);
@@ -43,7 +40,7 @@ const OrionPreloader = ({ onDone }) => {
       overflow: 'hidden',
     }}>
 
-      {/* Radial glow */}
+      {}
       <div style={{
         position: 'absolute',
         width: '600px', height: '600px',
@@ -52,7 +49,7 @@ const OrionPreloader = ({ onDone }) => {
         animation: 'glowPulse 2.4s ease-in-out infinite',
       }} />
 
-      {/* Brand wordmark */}
+      {}
       <div style={{
         position: 'relative', zIndex: 2,
         textAlign: 'center',
@@ -95,7 +92,7 @@ const OrionPreloader = ({ onDone }) => {
           Institutional Adversarial Research Platform
         </div>
 
-        {/* Progress bar */}
+        {}
         <div style={{
           width: '360px', height: '8px', backgroundColor: 'rgba(17, 35, 30, 0.15)',
           borderRadius: '9999px', margin: '0 auto 16px', overflow: 'hidden',
@@ -120,7 +117,7 @@ const OrionPreloader = ({ onDone }) => {
         </div>
       </div>
 
-      {/* Corner decorators */}
+      {}
       {['topLeft','topRight','bottomLeft','bottomRight'].map((pos) => {
         const isTop = pos.includes('top');
         const borderColor = isTop ? 'rgba(17, 35, 30, 0.3)' : 'rgba(204, 255, 127, 0.4)';
@@ -225,6 +222,6 @@ export default function App() {
   );
 }
 
-// App router v1
 
-// Preloader v2
+
+

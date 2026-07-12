@@ -1,6 +1,4 @@
-/**
- * Planner Node: Formulates targeted investigation areas for the ticker.
- */
+
 export const plannerNode = async (state) => {
   const { ticker, companyName } = state;
   console.log(`\n🧠 [Planner Node] Planning investigation roadmap for ${ticker}...`);
@@ -22,4 +20,4 @@ export const plannerNode = async (state) => {
   };
 };
 
-// Planner node v1
+

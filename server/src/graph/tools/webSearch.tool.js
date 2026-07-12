@@ -1,7 +1,4 @@
-/**
- * Web Search & News tool fetching latest catalysts and market sentiment.
- * Uses Tavily API if TAVILY_API_KEY is configured.
- */
+
 export const fetchCompanyNewsAndCatalysts = async (ticker, companyName) => {
   const query = `${companyName || ticker} stock news catalysts financial results risk factors`;
 
@@ -35,7 +32,7 @@ export const fetchCompanyNewsAndCatalysts = async (ticker, companyName) => {
     }
   }
 
-  // Fallback heuristic news summary
+  
   return {
     ticker,
     query,
@@ -50,4 +47,4 @@ export const fetchCompanyNewsAndCatalysts = async (ticker, companyName) => {
   };
 };
 
-// Web search tool v1
+

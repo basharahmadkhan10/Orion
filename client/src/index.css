@@ -38,7 +38,7 @@ main {
   width: 100%;
 }
 
-/* HERB AGENCY EXACT NAVBAR */
+
 .herb-navbar {
   position: absolute;
   top: 0;
@@ -131,7 +131,7 @@ main {
   box-shadow: 0 5px 0 var(--color-forest);
 }
 
-/* HERB AGENCY EXACT SPLIT SECTION */
+
 .herb-hero-wrapper {
   position: relative;
   width: 100%;
@@ -145,7 +145,7 @@ main {
   text-align: center;
 }
 
-/* SLANTED / CURVED BOTTOM SEPARATION INTO DARK GREEN */
+
 .herb-hero-top::after {
   content: '';
   position: absolute;
@@ -245,7 +245,7 @@ main {
   transform: translateY(-2px);
 }
 
-/* FLOATING MOCKUP STAGE WITH POPUP BADGES */
+
 .herb-mockup-stage {
   position: relative;
   max-width: 800px;
@@ -262,7 +262,7 @@ main {
   padding: 12px;
 }
 
-/* FLOATING OVERLAY POPUP CARDS */
+
 .popup-badge-top {
   position: absolute;
   top: -20px;
@@ -309,7 +309,7 @@ main {
   text-align: left;
 }
 
-/* BOTTOM 4-CARD FEATURE GRID SECTION */
+
 .herb-features-section {
   background-color: var(--color-forest);
   padding: 60px 24px 60px;
@@ -402,7 +402,7 @@ main {
   width: fit-content;
 }
 
-/* DASHBOARD & PAGES */
+
 .dashboard-section {
   max-width: 1280px;
   margin: 0 auto;
@@ -494,7 +494,7 @@ main {
   cursor: pointer;
 }
 
-/* RESULTS CARD */
+
 .results-card {
   background-color: var(--color-white);
   color: var(--color-forest);
@@ -567,7 +567,7 @@ main {
   font-weight: 700;
 }
 
-/* TABS NAVIGATION */
+
 .tabs-nav {
   display: flex;
   flex-wrap: wrap;
@@ -628,7 +628,7 @@ main {
   margin-bottom: 12px;
 }
 
-/* TABLE */
+
 .table-container {
   overflow-x: auto;
 }
@@ -656,7 +656,7 @@ main {
   vertical-align: top;
 }
 
-/* BUTTONS */
+
 .btn-pill-white {
   background-color: var(--color-white);
   color: var(--color-forest);
@@ -688,7 +688,7 @@ main {
   cursor: pointer;
 }
 
-/* FOOTER */
+
 .footer {
   background-color: var(--color-forest);
   color: var(--color-white);
@@ -734,7 +734,7 @@ main {
     padding: 12px 16px;
   }
   .herb-nav-links {
-    display: none !important; /* Hide links on mobile to avoid overflow */
+    display: none !important; 
   }
   .herb-grid-container {
     grid-template-columns: 1fr;
@@ -746,12 +746,12 @@ main {
 }
 
 @media (max-width: 576px) {
-  /* Main app container adjustments */
+  
   .dashboard-section {
     padding: 16px 12px;
   }
   
-  /* Hero & preloader adjustments */
+  
   .herb-hero-top {
     padding: 120px 16px 60px;
   }
@@ -780,7 +780,7 @@ main {
     justify-content: center;
   }
 
-  /* Form & inputs stack for small screens (iPhone/S23) */
+  
   .search-box-card {
     padding: 20px 16px;
     border-radius: 18px;
@@ -811,7 +811,7 @@ main {
     padding: 12px 20px;
   }
 
-  /* Results Card Mobile adjustments */
+  
   .results-card {
     padding: 16px;
     border-radius: 18px;
@@ -835,7 +835,7 @@ main {
     font-size: 20px;
   }
 
-  /* Tab Navigation Stack/Wrap for mobile */
+  
   .tabs-nav {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -849,21 +849,21 @@ main {
     border-radius: 8px;
   }
 
-  /* Panel Content adjustments */
+  
   .tab-panel {
     padding: 16px;
   }
   
-  /* CIO 2-column dashboard layout on mobile */
+  
   .results-card div[style*="grid-template-columns"] {
     grid-template-columns: 1fr !important;
     gap: 16px !important;
   }
 
-  /* Auth page mobile responsive styling */
+  
   .auth-page-container {
     padding: 100px 16px 40px !important;
-    background: #11231E !important; /* Stack bg instead of split angled gradient on mobile */
+    background: #11231E !important; 
   }
   .auth-page-card {
     padding: 24px 20px !important;
@@ -872,13 +872,11 @@ main {
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35) !important;
   }
   .auth-page-container > div[style*="position: absolute"] {
-    display: none !important; /* Hide watermarks on mobile to save space */
+    display: none !important; 
   }
 }
 
-/* =====================================================
-   ORION PRELOADER KEYFRAMES
-   ===================================================== */
+
 @keyframes gridScroll {
   0%   { background-position: 0 0; }
   100% { background-position: 60px 60px; }
@@ -894,9 +892,7 @@ main {
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* =====================================================
-   ANIMATED RESEARCH CENTER KEYFRAMES
-   ===================================================== */
+
 @keyframes shimmer {
   0%   { margin-left: -100%; width: 60%; }
   60%  { margin-left: 80%;   width: 60%; }
@@ -918,17 +914,17 @@ main {
   to   { opacity: 1; transform: translateX(0); }
 }
 
-/* Agent active dot blink */
+
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50%       { opacity: 0.2; }
 }
-/* CSS tokens v1 */
 
-/* Evidence table styles */
 
-/* Print styles */
 
-/* Preloader keyframes */
 
-/* Research center keyframes */
+
+
+
+
+

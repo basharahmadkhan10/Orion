@@ -4,7 +4,7 @@ import { ArrowUpRight, TrendingUp, CheckCircle2, ShieldCheck, Activity } from 'l
 export const HeroSection = ({ onNavigate }) => {
   return (
     <div className="herb-hero-wrapper">
-      {/* TOP LIGHT GREEN SECTION */}
+      {}
       <section id="how-we-roll" className="herb-hero-top">
         <div className="herb-hero-content">
           <h1 className="herb-title">
@@ -36,15 +36,15 @@ export const HeroSection = ({ onNavigate }) => {
           </div>
         </div>
 
-        {/* FLOATING MOCKUP STAGE WITH POPUP BADGES */}
+        {}
         <div className="herb-mockup-stage">
-          {/* Top Center Pill Badge */}
+          {}
           <div className="popup-badge-top">
             <TrendingUp size={16} style={{ color: '#047857' }} />
             <span>+347.23% Alpha Convergence</span>
           </div>
 
-          {/* Left Floating Stat Card */}
+          {}
           <div className="popup-badge-left">
             <div style={{ fontSize: '11px', fontWeight: 700, color: '#64748B', textTransform: 'uppercase', marginBottom: '4px' }}>
               CIO Confidence Verdict
@@ -57,7 +57,7 @@ export const HeroSection = ({ onNavigate }) => {
             </div>
           </div>
 
-          {/* Right Floating Stat Card */}
+          {}
           <div className="popup-badge-right">
             <div style={{ fontSize: '11px', fontWeight: 700, color: '#64748B', textTransform: 'uppercase', marginBottom: '4px' }}>
               Audited Citations Ledger
@@ -70,7 +70,7 @@ export const HeroSection = ({ onNavigate }) => {
             </div>
           </div>
 
-          {/* Center Main Dashboard Mockup Card */}
+          {}
           <div className="herb-main-mockup">
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '2px solid #E2E8F0', paddingBottom: '10px', marginBottom: '12px', flexWrap: 'wrap', gap: '12px' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
@@ -86,7 +86,7 @@ export const HeroSection = ({ onNavigate }) => {
               </span>
             </div>
 
-            {/* Embedded Workstation & Metrics Visual */}
+            {}
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '16px', textAlign: 'left' }}>
               <div style={{ backgroundColor: '#F8FAFC', border: '2px solid #E2E8F0', borderRadius: '16px', padding: '12px' }}>
                 <div style={{ fontSize: '11px', fontWeight: 700, color: '#64748B', textTransform: 'uppercase' }}>
@@ -128,11 +128,11 @@ export const HeroSection = ({ onNavigate }) => {
         </div>
       </section>
 
-      {/* LOWER DARK GREEN SECTION: OUR SERVICES */}
+      {}
       <section id="services-section" className="herb-features-section">
         <div className="herb-features-header">
           <span style={{ backgroundColor: '#CCFF7F', color: '#11231E', fontFamily: 'Space Grotesk, sans-serif', fontSize: '12px', fontWeight: 700, padding: '6px 14px', borderRadius: '8px', display: 'inline-block', marginBottom: '14px', letterSpacing: '1px' }}>
-            OUR SERVICES // MULTI-AGENT ARCHITECTURE
+            OUR SERVICES 
           </span>
           <h2 className="herb-features-title">
             If all your <span className="title-pill-green">quantitative research needs</span> and wants were a place – that&apos;s us.
@@ -143,7 +143,7 @@ export const HeroSection = ({ onNavigate }) => {
         </div>
 
         <div className="herb-grid-container">
-          {/* Card 1: White Background */}
+          {}
           <div className="feature-grid-card card-bg-white">
             <div>
               <span className="feature-card-label">Multi-Agent Debate</span>
@@ -165,7 +165,7 @@ export const HeroSection = ({ onNavigate }) => {
             </div>
           </div>
 
-          {/* Card 2: Light Slate/Lavender Background */}
+          {}
           <div className="feature-grid-card card-bg-slate">
             <div>
               <span className="feature-card-label">CIO Judge Verdict</span>
@@ -187,7 +187,7 @@ export const HeroSection = ({ onNavigate }) => {
             </div>
           </div>
 
-          {/* Card 3: Sage Green Background */}
+          {}
           <div className="feature-grid-card card-bg-sage">
             <div>
               <span className="feature-card-label">Numbered Citations</span>
@@ -209,7 +209,7 @@ export const HeroSection = ({ onNavigate }) => {
             </div>
           </div>
 
-          {/* Card 4: Dark Charcoal Forest Background */}
+          {}
           <div className="feature-grid-card card-bg-dark">
             <div>
               <span className="feature-card-label">Saved Dossiers</span>
@@ -233,12 +233,12 @@ export const HeroSection = ({ onNavigate }) => {
         </div>
       </section>
 
-      {/* BRAND NEW HOMEPAGE SECTION: OUR COMMUNITY */}
+      {}
       <section id="community-section" style={{ backgroundColor: '#F8FAFC', padding: '100px 48px', borderTop: '4px solid #11231E' }}>
         <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: '64px' }}>
             <span style={{ backgroundColor: '#11231E', color: '#CCFF7F', fontFamily: 'Space Grotesk, sans-serif', fontSize: '12px', fontWeight: 700, padding: '6px 14px', borderRadius: '8px', display: 'inline-block', marginBottom: '16px', letterSpacing: '1px' }}>
-              OUR COMMUNITY // ANALYST ECOSYSTEM
+              OUR COMMUNITY 
             </span>
             <h2 style={{ fontFamily: 'Space Grotesk, sans-serif', fontSize: '42px', fontWeight: 700, color: '#11231E', lineHeight: 1.2, marginBottom: '16px' }}>
               Built for Quantitative Desks & Portfolio Managers
@@ -312,8 +312,8 @@ export const HeroSection = ({ onNavigate }) => {
   );
 };
 
-// HeroSection v1
 
-// Services section v2
 
-// Community section v3
+
+
+

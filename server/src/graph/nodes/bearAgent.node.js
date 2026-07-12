@@ -1,8 +1,6 @@
 import { GoogleGenAI } from "@google/genai";
 
-/**
- * Institutional Bear Agent Node: Formulates short/risk thesis citing evidence IDs [E1, E2, ...].
- */
+
 export const bearAgentNode = async (state) => {
   const { ticker, evidenceLedger } = state;
   console.log(`[Bear Agent Node] Formulating risk and valuation counter-thesis for ${ticker}...`);
@@ -50,6 +48,6 @@ Return strictly valid JSON with no markdown formatting in this structure:
   };
 };
 
-// Bear agent v1
 
-// Bear agent v2 - bullets
+
+

@@ -1,6 +1,4 @@
-/**
- * Custom API Error class following Hitesh Choudhary production pattern.
- */
+
 class ApiError extends Error {
   constructor(
     statusCode,
@@ -25,4 +23,4 @@ class ApiError extends Error {
 
 export { ApiError };
 
-// ApiError class
+

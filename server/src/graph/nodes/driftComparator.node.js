@@ -1,8 +1,6 @@
 import { ResearchRun } from "../../models/researchRun.model.js";
 
-/**
- * Drift Comparator Node: Compares current verdict against user's last historical completed run in MongoDB.
- */
+
 export const driftComparatorNode = async (state) => {
   const { userId, ticker, verdict } = state;
   console.log(`\n📈 [Drift Comparator Node] Checking historical research drift for ${ticker}...`);
@@ -18,7 +16,7 @@ export const driftComparatorNode = async (state) => {
   }
 
   try {
-    // Fast O(1) index lookup using { userId: 1, ticker: 1, createdAt: -1 }
+    
     const previousRun = await ResearchRun.findOne({
       userId,
       ticker: ticker.toUpperCase(),

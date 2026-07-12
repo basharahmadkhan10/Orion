@@ -8,9 +8,7 @@ import { bearAgentNode } from "./nodes/bearAgent.node.js";
 import { judgeAgentNode } from "./nodes/judgeAgent.node.js";
 import { driftComparatorNode } from "./nodes/driftComparator.node.js";
 
-/**
- * Builds and compiles the LangGraph Multi-Agent Adversarial Investment Research pipeline.
- */
+
 export const buildResearchGraph = () => {
   const workflow = new StateGraph(ResearchGraphState)
     .addNode("planner", plannerNode)
@@ -41,4 +39,4 @@ export const runResearchPipeline = async (initialState) => {
   return result;
 };
 
-// Research graph v1
+

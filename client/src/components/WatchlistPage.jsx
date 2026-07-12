@@ -24,7 +24,7 @@ export const WatchlistPage = ({ user, onNavigateToResearch }) => {
     loadHistory();
   }, [user]);
 
-  // Combine live dynamic history from MongoDB with institutional baseline
+  
   const dynamicItems = history.map((run) => ({
     ticker: run.ticker,
     name: run.companyName || run.ticker,
@@ -84,7 +84,7 @@ export const WatchlistPage = ({ user, onNavigateToResearch }) => {
     },
   ];
 
-  // Merge dynamic user runs first, then non-duplicate baseline items
+  
   const activeTickersSet = new Set(dynamicItems.map((item) => item.ticker));
   const filteredBaseline = baselineItems.filter(
     (b) => !activeTickersSet.has(b.ticker)
@@ -122,7 +122,7 @@ export const WatchlistPage = ({ user, onNavigateToResearch }) => {
         </form>
       </div>
 
-      {/* Watchlist Table Card */}
+      {}
       <div className="results-card">
         <div className="results-header">
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
@@ -240,4 +240,4 @@ export const WatchlistPage = ({ user, onNavigateToResearch }) => {
   );
 };
 
-// WatchlistPage v1
+

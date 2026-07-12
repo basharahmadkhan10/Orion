@@ -1,6 +1,4 @@
-/**
- * Evidence Builder Node: Converts raw tool output into structured numbered EvidenceItem ledger.
- */
+
 export const evidenceBuilderNode = async (state) => {
   const { rawFinancialData, rawNewsData, ticker } = state;
   console.log(`[Evidence Builder Node] Structuring immutable evidence ledger with detailed institutional briefings...`);
@@ -115,6 +113,6 @@ export const evidenceBuilderNode = async (state) => {
   };
 };
 
-// Evidence builder v1
 
-// Evidence builder v2 - filter fix
+
+

@@ -4,7 +4,7 @@ import { ArrowUpRight } from 'lucide-react';
 export const Navbar = ({ user, currentView, onNavigate, onLogout }) => {
   return (
     <header className="herb-navbar print-hidden">
-      {/* Brand Badge Box */}
+      {}
       <button
         onClick={() => onNavigate('home')}
         className="herb-brand-box"
@@ -13,7 +13,7 @@ export const Navbar = ({ user, currentView, onNavigate, onLogout }) => {
         <span className="herb-brand-sub">AGENCY</span>
       </button>
 
-      {/* Center Navigation Links */}
+      {}
       <nav className="herb-nav-links">
         <button
           onClick={() => {
@@ -55,7 +55,7 @@ export const Navbar = ({ user, currentView, onNavigate, onLogout }) => {
         </button>
       </nav>
 
-      {/* Top Right Action Button */}
+      {}
       <div>
         {user ? (
           <button
@@ -79,6 +79,6 @@ export const Navbar = ({ user, currentView, onNavigate, onLogout }) => {
   );
 };
 
-// Navbar v1
 
-// Navbar smooth scroll v2
+
+

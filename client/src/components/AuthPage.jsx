@@ -47,7 +47,7 @@ export const AuthPage = ({ onSuccess, onNavigate }) => {
         overflow: 'hidden',
       }}
     >
-      {/* Decorative Angled Watermarks */}
+      {}
       <div
         style={{
           position: 'absolute',
@@ -61,7 +61,7 @@ export const AuthPage = ({ onSuccess, onNavigate }) => {
           pointerEvents: 'none',
         }}
       >
-        ORION // INSTITUTIONAL ADVERSARIAL PLATFORM
+        ORION 
       </div>
       <div
         style={{
@@ -76,7 +76,7 @@ export const AuthPage = ({ onSuccess, onNavigate }) => {
           pointerEvents: 'none',
         }}
       >
-        MULTI-AGENT AUDIT DESK // VERIFIED
+        MULTI-AGENT AUDIT DESK 
       </div>
 
       <div
@@ -95,7 +95,7 @@ export const AuthPage = ({ onSuccess, onNavigate }) => {
       >
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '24px' }}>
           <span style={{ backgroundColor: '#11231E', color: '#CCFF7F', fontFamily: 'Space Grotesk, sans-serif', fontSize: '12px', fontWeight: 700, padding: '6px 14px', borderRadius: '8px', letterSpacing: '1px' }}>
-            ORION AGENCY // AUTH
+            ORION AGENCY 
           </span>
           <ShieldCheck size={28} style={{ color: '#11231E' }} />
         </div>
@@ -189,6 +189,6 @@ export const AuthPage = ({ onSuccess, onNavigate }) => {
   );
 };
 
-// AuthPage v1
 
-// AuthPage watermarks v2
+
+

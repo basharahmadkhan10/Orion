@@ -14,21 +14,21 @@ export const startResearchRun = asyncHandler(async (req, res) => {
 
   const symbol = ticker.toUpperCase().trim();
 
-  // Ensure company exists in DB
+  
   await Company.findOneAndUpdate(
     { ticker: symbol },
     { $setOnInsert: { ticker: symbol, name: companyName || symbol } },
     { upsert: true, new: true }
   );
 
-  // Create initial ResearchRun in MongoDB
+  
   const runDoc = await ResearchRun.create({
     userId: req.user._id,
     ticker: symbol,
     status: "IN_PROGRESS",
   });
 
-  // Execute LangGraph Adversarial Debate Pipeline
+  
   try {
     const finalState = await runResearchPipeline({
       userId: req.user._id.toString(),
@@ -92,4 +92,4 @@ export const getResearchRunById = asyncHandler(async (req, res) => {
     .json(new ApiResponse(200, run, "Research run details fetched successfully"));
 });
 
-// Research controller v1
+

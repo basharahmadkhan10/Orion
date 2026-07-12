@@ -1,6 +1,4 @@
-/**
- * Standard API Response class following Hitesh Choudhary production pattern.
- */
+
 class ApiResponse {
   constructor(statusCode, data, message = "Success") {
     this.statusCode = statusCode;
@@ -12,4 +10,4 @@ class ApiResponse {
 
 export { ApiResponse };
 
-// ApiResponse utility
+

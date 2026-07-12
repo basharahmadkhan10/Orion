@@ -1,8 +1,6 @@
 import { Annotation } from "@langchain/langgraph";
 
-/**
- * LangGraph State Channels for the Adversarial Investment Desk.
- */
+
 export const ResearchGraphState = Annotation.Root({
   userId: Annotation({
     reducer: (x, y) => y ?? x,
@@ -50,4 +48,4 @@ export const ResearchGraphState = Annotation.Root({
   }),
 });
 
-// LangGraph state v1
+

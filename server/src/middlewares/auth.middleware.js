@@ -3,10 +3,7 @@ import { ApiError } from "../utils/ApiError.js";
 import { asyncHandler } from "../utils/asyncHandler.js";
 import { User } from "../models/user.model.js";
 
-/**
- * Authentication middleware requiring explicit Authorization: Bearer <accessToken> header.
- * Never checks cookies for access token per strict instruction.
- */
+
 export const verifyJWT = asyncHandler(async (req, res, next) => {
   const authHeader = req.header("Authorization");
 
@@ -35,4 +32,4 @@ export const verifyJWT = asyncHandler(async (req, res, next) => {
   }
 });
 
-// JWT middleware v1
+

@@ -1,8 +1,6 @@
 import yahooFinance from "yahoo-finance2";
 
-/**
- * Free Yahoo Finance tool fetching live ticker quotes, fundamentals, and sector metrics.
- */
+
 export const fetchFinancialData = async (ticker) => {
   const symbol = ticker.toUpperCase().trim();
   try {
@@ -31,7 +29,7 @@ export const fetchFinancialData = async (ticker) => {
     }
     throw new Error("Missing live quote price");
   } catch (error) {
-    // Known institutional benchmark profiles for major equities + dynamic hash generator for all others
+    
     const knownProfiles = {
       AAPL: {
         name: "Apple Inc.",
@@ -147,7 +145,7 @@ export const fetchFinancialData = async (ticker) => {
       };
     }
 
-    // Dynamic hash metrics for any other arbitrary ticker entered
+    
     const hash = symbol.split("").reduce((acc, c) => acc + c.charCodeAt(0), 0);
     const basePrice = 40 + (hash % 310);
     const pe = 16 + (hash % 38);
@@ -172,4 +170,4 @@ export const fetchFinancialData = async (ticker) => {
   }
 };
 
-// Yahoo Finance tool v1
+

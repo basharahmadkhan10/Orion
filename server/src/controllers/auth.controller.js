@@ -6,16 +6,12 @@ import { User } from "../models/user.model.js";
 import { RefreshToken } from "../models/refreshToken.model.js";
 import jwt from "jsonwebtoken";
 
-/**
- * Helper to generate secure token hash for RefreshToken DB storage
- */
+
 const hashToken = (token) => {
   return crypto.createHash("sha256").update(token).digest("hex");
 };
 
-/**
- * Helper to generate access & refresh tokens and store refresh token in DB
- */
+
 const generateAccessAndRefreshTokens = async (userId, familyId = null) => {
   const user = await User.findById(userId);
   if (!user) throw new ApiError(404, "User not found");
@@ -26,7 +22,7 @@ const generateAccessAndRefreshTokens = async (userId, familyId = null) => {
   const tokenHash = hashToken(refreshToken);
   const effectiveFamilyId = familyId || crypto.randomUUID();
 
-  // Store refresh token in DB with 10 days expiration
+  
   const expiresAt = new Date(Date.now() + 10 * 24 * 60 * 60 * 1000);
   await RefreshToken.create({
     userId: user._id,
@@ -100,7 +96,7 @@ export const loginUser = asyncHandler(async (req, res) => {
         200,
         {
           user: loggedInUser,
-          accessToken, // Strictly returned in response body for Authorization header
+          accessToken, 
         },
         "User logged in successfully"
       )
@@ -131,11 +127,7 @@ export const logoutUser = asyncHandler(async (req, res) => {
     .json(new ApiResponse(200, {}, "User logged out successfully"));
 });
 
-/**
- * Refresh Token Rotation endpoint.
- * Issues a new access token + rotated refresh token.
- * Detects reuse of revoked tokens and revokes the entire family.
- */
+
 export const refreshAccessToken = asyncHandler(async (req, res) => {
   const incomingRefreshToken =
     req.cookies?.refreshToken || req.body?.refreshToken;
@@ -161,9 +153,9 @@ export const refreshAccessToken = asyncHandler(async (req, res) => {
     throw new ApiError(401, "Refresh token not recognized");
   }
 
-  // Security Check: If token is already revoked -> possible theft/reuse detected!
+  
   if (existingTokenDoc.revoked) {
-    // Revoke entire token family
+    
     await RefreshToken.updateMany(
       { familyId: existingTokenDoc.familyId },
       { $set: { revoked: true } }
@@ -174,11 +166,11 @@ export const refreshAccessToken = asyncHandler(async (req, res) => {
     );
   }
 
-  // Revoke current refresh token
+  
   existingTokenDoc.revoked = true;
   await existingTokenDoc.save();
 
-  // Issue new access & rotated refresh token in same family
+  
   const { accessToken: newAccessToken, refreshToken: newRefreshToken } =
     await generateAccessAndRefreshTokens(
       existingTokenDoc.userId,
@@ -205,4 +197,4 @@ export const refreshAccessToken = asyncHandler(async (req, res) => {
     );
 });
 
-// Auth controller v1
+

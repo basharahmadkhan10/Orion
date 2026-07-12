@@ -1,8 +1,6 @@
 import { ApiError } from "../utils/ApiError.js";
 
-/**
- * Global centralized error handling middleware.
- */
+
 const errorHandler = (err, req, res, next) => {
   let error = err;
 
@@ -25,4 +23,4 @@ const errorHandler = (err, req, res, next) => {
 
 export { errorHandler };
 
-// Error middleware
+

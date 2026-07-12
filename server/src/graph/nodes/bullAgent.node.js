@@ -1,8 +1,6 @@
 import { GoogleGenAI } from "@google/genai";
 
-/**
- * Institutional Bull Agent Node: Formulates long investment thesis citing evidence IDs [E1, E2, ...].
- */
+
 export const bullAgentNode = async (state) => {
   const { ticker, evidenceLedger } = state;
   console.log(`[Bull Agent Node] Formulating long institutional thesis for ${ticker}...`);
@@ -51,6 +49,6 @@ Return strictly valid JSON with no markdown formatting in this structure:
   };
 };
 
-// Bull agent v1
 
-// Bull agent v2 - bullets
+
+

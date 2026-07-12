@@ -1,8 +1,6 @@
 import { GoogleGenAI } from "@google/genai";
 
-/**
- * Institutional Judge Agent Node: Evaluates Bull vs Bear debate against Evidence Ledger and delivers CIO Verdict.
- */
+
 export const judgeAgentNode = async (state) => {
   const { ticker, evidenceLedger, bullThesis, bearThesis } = state;
   console.log(`[Judge Agent Node] Evaluating institutional debate for ${ticker}...`);
@@ -43,9 +41,9 @@ Return strictly valid JSON:
   const e1 = evidenceLedger[0] || { id: "E1", content: "Fundamental valuation" };
   const e2 = evidenceLedger[1] || { id: "E2", content: "Profitability & multiples" };
 
-  // Compute dynamic deterministic quantitative score based on ticker hash + fundamentals
+  
   const hash = ticker.split("").reduce((acc, c) => acc + c.charCodeAt(0), 0);
-  const confidenceScore = 74 + (hash % 18); // Dynamic score between 74 and 91 per ticker
+  const confidenceScore = 74 + (hash % 18); 
   const decisions = ["INVEST", "WATCH", "INVEST", "PASS", "INVEST"];
   const decision = decisions[hash % decisions.length];
 
@@ -64,4 +62,4 @@ Return strictly valid JSON:
   };
 };
 
-// Judge agent v1
+

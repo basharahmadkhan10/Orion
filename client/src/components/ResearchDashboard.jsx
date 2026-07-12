@@ -107,7 +107,7 @@ export const ResearchDashboard = ({ user, onRequireAuth, initialTicker }) => {
     setError('');
     setResearchData(null);
 
-    // Animate agent steps: each step ~3.5s (total ~21s to match avg API time)
+    
     const stepDurations = [0, 3500, 7000, 10500, 14000, 17500];
     stepDurations.forEach((delay, idx) => {
       setTimeout(() => setAgentStep(idx + 1), delay);
@@ -142,7 +142,7 @@ export const ResearchDashboard = ({ user, onRequireAuth, initialTicker }) => {
     window.print();
   };
 
-  // Filter evidence ledger by category
+  
   const filteredEvidence = researchData?.evidenceLedger?.filter((item) => {
     if (categoryFilter === 'ALL') return true;
     return item.category?.toUpperCase().includes(categoryFilter);
@@ -216,7 +216,7 @@ export const ResearchDashboard = ({ user, onRequireAuth, initialTicker }) => {
           overflow: 'hidden',
           position: 'relative',
         }}>
-          {/* Animated grid background */}
+          {}
           <div style={{
             position: 'absolute', inset: 0,
             backgroundImage: `
@@ -229,11 +229,11 @@ export const ResearchDashboard = ({ user, onRequireAuth, initialTicker }) => {
           }} />
 
           <div style={{ position: 'relative', zIndex: 1, padding: '40px 44px' }}>
-            {/* Header */}
+            {}
             <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', marginBottom: '32px', flexWrap: 'wrap', gap: '16px' }}>
               <div>
                 <div style={{ fontSize: '11px', fontWeight: 700, color: '#11231E', backgroundColor: '#CCFF7F', padding: '4px 12px', borderRadius: '6px', display: 'inline-block', marginBottom: '12px', letterSpacing: '2px' }}>
-                  ORION // MULTI-AGENT RESEARCH CENTER
+                  ORION 
                 </div>
                 <h3 style={{ fontFamily: 'Space Grotesk, sans-serif', fontSize: '28px', fontWeight: 700, color: '#FFFFFF', marginBottom: '6px', letterSpacing: '-0.5px' }}>
                   Debating <span style={{ color: '#CCFF7F' }}>{tickerInput}</span>
@@ -253,7 +253,7 @@ export const ResearchDashboard = ({ user, onRequireAuth, initialTicker }) => {
               </div>
             </div>
 
-            {/* Global Progress Bar */}
+            {}
             <div style={{ width: '100%', height: '4px', backgroundColor: 'rgba(255,255,255,0.1)', borderRadius: '9999px', marginBottom: '32px', overflow: 'hidden' }}>
               <div style={{
                 height: '100%',
@@ -265,7 +265,7 @@ export const ResearchDashboard = ({ user, onRequireAuth, initialTicker }) => {
               }} />
             </div>
 
-            {/* Agent Steps */}
+            {}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
               {AGENT_STEPS.map((step) => {
                 const isDone = agentStep > step.id;
@@ -293,7 +293,7 @@ export const ResearchDashboard = ({ user, onRequireAuth, initialTicker }) => {
                     boxShadow: isActive ? '0 0 24px rgba(204,255,127,0.08)' : 'none',
                     animation: isDone ? 'agentRowIn 0.4s ease both' : 'none',
                   }}>
-                    {/* Step Icon */}
+                    {}
                     <div style={{
                       width: '40px', height: '40px', borderRadius: '50%', flexShrink: 0,
                       display: 'flex', alignItems: 'center', justifyContent: 'center',
@@ -307,7 +307,7 @@ export const ResearchDashboard = ({ user, onRequireAuth, initialTicker }) => {
                       {isDone ? '✓' : step.id}
                     </div>
 
-                    {/* Step Details */}
+                    {}
                     <div style={{ flex: 1, minWidth: 0 }}>
                       <div style={{
                         fontFamily: 'Space Grotesk, sans-serif', fontSize: '14px', fontWeight: 700,
@@ -331,7 +331,7 @@ export const ResearchDashboard = ({ user, onRequireAuth, initialTicker }) => {
                       </div>
                     </div>
 
-                    {/* Right: active shimmer bar or done bar */}
+                    {}
                     <div style={{ width: '72px', height: '4px', backgroundColor: 'rgba(255,255,255,0.08)', borderRadius: '9999px', overflow: 'hidden', flexShrink: 0 }}>
                       {isActive && (
                         <div style={{
@@ -351,7 +351,7 @@ export const ResearchDashboard = ({ user, onRequireAuth, initialTicker }) => {
               })}
             </div>
 
-            {/* Footer disclaimer */}
+            {}
             <div style={{ marginTop: '28px', padding: '12px 18px', backgroundColor: 'rgba(255,255,255,0.04)', borderRadius: '10px', border: '1px solid rgba(204,255,127,0.1)', display: 'flex', alignItems: 'center', gap: '10px' }}>
               <span style={{ fontSize: '16px' }}>🔒</span>
               <span style={{ fontSize: '12px', color: 'rgba(255,255,255,0.4)', fontWeight: 500 }}>
@@ -366,7 +366,7 @@ export const ResearchDashboard = ({ user, onRequireAuth, initialTicker }) => {
 
       {researchData && !loading && (
         <div className="results-card print-area">
-          {/* SCREEN ONLY INTERACTIVE REPORT */}
+          {}
           <div className="print-hidden">
             <div className="results-header">
               <div className="ticker-display">
@@ -401,7 +401,7 @@ export const ResearchDashboard = ({ user, onRequireAuth, initialTicker }) => {
               </div>
             </div>
 
-            {/* NAVIGATION TABS */}
+            {}
             <div className="tabs-nav">
               <button
                 type="button"
@@ -433,10 +433,10 @@ export const ResearchDashboard = ({ user, onRequireAuth, initialTicker }) => {
               </button>
             </div>
 
-            {/* TAB CONTENT: ALIGNED CIO VERDICT 2-COLUMN CARD */}
+            {}
             {activeTab === 'verdict' && (
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 1fr))', gap: '24px' }}>
-                {/* Left Column: CIO Judgment Card */}
+                {}
                 <div className="tab-panel" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', border: '3px solid #11231E' }}>
                   <div>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px' }}>
@@ -483,7 +483,7 @@ export const ResearchDashboard = ({ user, onRequireAuth, initialTicker }) => {
                   </div>
                 </div>
 
-                {/* Right Column: Mandatory Kill Criteria Box */}
+                {}
                 <div className="tab-panel" style={{ backgroundColor: '#FEF2F2', border: '3px solid #EF4444', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                   <div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '16px' }}>
@@ -525,7 +525,7 @@ export const ResearchDashboard = ({ user, onRequireAuth, initialTicker }) => {
               </div>
             )}
 
-            {/* TAB CONTENT: BULL THESIS */}
+            {}
             {activeTab === 'bull' && (
               <div className="tab-panel" style={{ backgroundColor: '#F0FDF4', borderColor: '#15803D', border: '3px solid #15803D' }}>
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px' }}>
@@ -553,7 +553,7 @@ export const ResearchDashboard = ({ user, onRequireAuth, initialTicker }) => {
               </div>
             )}
 
-            {/* TAB CONTENT: BEAR THESIS */}
+            {}
             {activeTab === 'bear' && (
               <div className="tab-panel" style={{ backgroundColor: '#FAF5FF', borderColor: '#7E22CE', border: '3px solid #7E22CE' }}>
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px' }}>
@@ -581,10 +581,10 @@ export const ResearchDashboard = ({ user, onRequireAuth, initialTicker }) => {
               </div>
             )}
 
-            {/* TAB CONTENT: OPTIMIZED EVIDENCE LEDGER TABLE */}
+            {}
             {activeTab === 'evidence' && (
               <div>
-                {/* Category Filter Pills */}
+                {}
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap', marginBottom: '20px' }}>
                   <span style={{ fontSize: '13px', fontWeight: 700, color: '#4B5563', display: 'flex', alignItems: 'center', gap: '4px', marginRight: '4px' }}>
                     <Filter size={14} /> Category Filter:
@@ -682,7 +682,7 @@ export const ResearchDashboard = ({ user, onRequireAuth, initialTicker }) => {
             )}
           </div>
 
-          {/* FULL INSTITUTIONAL TEAR-SHEET PRINT-ONLY AREA (VISIBLE ONLY ON EXPORT PDF) */}
+          {}
           <div className="pdf-tearsheet-only">
             <div style={{ borderBottom: '3px solid #000000', paddingBottom: '16px', marginBottom: '24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <div>
@@ -700,7 +700,7 @@ export const ResearchDashboard = ({ user, onRequireAuth, initialTicker }) => {
               </div>
             </div>
 
-            {/* Section 1: Executive Synthesis & Kill Criteria */}
+            {}
             <div style={{ marginBottom: '24px' }}>
               <h2 style={{ fontSize: '18px', fontWeight: 700, borderBottom: '2px solid #CBD5E1', paddingBottom: '6px', marginBottom: '12px' }}>
                 1. EXECUTIVE SYNTHESIS & JUDGE VERDICT
@@ -721,7 +721,7 @@ export const ResearchDashboard = ({ user, onRequireAuth, initialTicker }) => {
               </ul>
             </div>
 
-            {/* Section 2: Complete Bullish Growth Thesis */}
+            {}
             <div style={{ marginBottom: '24px' }}>
               <h2 style={{ fontSize: '18px', fontWeight: 700, borderBottom: '2px solid #15803D', paddingBottom: '6px', marginBottom: '12px', color: '#14532D' }}>
                 2. BULLISH INVESTMENT THESIS (GROWTH DRIVERS & CATALYSTS)
@@ -733,7 +733,7 @@ export const ResearchDashboard = ({ user, onRequireAuth, initialTicker }) => {
               </ul>
             </div>
 
-            {/* Section 3: Complete Adversarial Bear Thesis */}
+            {}
             <div style={{ marginBottom: '24px' }}>
               <h2 style={{ fontSize: '18px', fontWeight: 700, borderBottom: '2px solid #7E22CE', paddingBottom: '6px', marginBottom: '12px', color: '#581C87' }}>
                 3. ADVERSARIAL BEAR RISK THESIS (MACRO & HEADWINDS)
@@ -745,7 +745,7 @@ export const ResearchDashboard = ({ user, onRequireAuth, initialTicker }) => {
               </ul>
             </div>
 
-            {/* Section 4: Audited Evidence Ledger Table */}
+            {}
             <div>
               <h2 style={{ fontSize: '18px', fontWeight: 700, borderBottom: '2px solid #000000', paddingBottom: '6px', marginBottom: '12px' }}>
                 4. AUDITED EVIDENCE LEDGER CITATIONS [E1]-[E{researchData.evidenceLedger?.length || 12}]
@@ -775,7 +775,7 @@ export const ResearchDashboard = ({ user, onRequireAuth, initialTicker }) => {
         </div>
       )}
 
-      {/* EVIDENCE PROOF OF LEGITIMACY & AUDIT MODAL */}
+      {}
       {selectedEvidence && (
         <div
           style={{
@@ -809,7 +809,7 @@ export const ResearchDashboard = ({ user, onRequireAuth, initialTicker }) => {
               overflow: 'hidden',
             }}
           >
-            {/* Modal Header Bar */}
+            {}
             <div
               style={{
                 display: 'flex',
@@ -845,7 +845,7 @@ export const ResearchDashboard = ({ user, onRequireAuth, initialTicker }) => {
               </button>
             </div>
 
-            {/* Scrollable Medium-Style Editorial Body */}
+            {}
             <div
               style={{
                 padding: '36px 40px',
@@ -853,7 +853,7 @@ export const ResearchDashboard = ({ user, onRequireAuth, initialTicker }) => {
                 flex: 1,
               }}
             >
-              {/* Editorial Category Pill */}
+              {}
               <span
                 style={{
                   backgroundColor: '#F1F5F9',
@@ -871,7 +871,7 @@ export const ResearchDashboard = ({ user, onRequireAuth, initialTicker }) => {
                 {selectedEvidence.category}
               </span>
 
-              {/* Editorial Title */}
+              {}
               <h2
                 style={{
                   fontFamily: 'Space Grotesk, sans-serif',
@@ -885,7 +885,7 @@ export const ResearchDashboard = ({ user, onRequireAuth, initialTicker }) => {
                 {selectedEvidence.headline || `${selectedEvidence.category} — ${researchData?.ticker || 'Institutional'} Dossier`}
               </h2>
 
-              {/* Medium-Style Byline Bar */}
+              {}
               <div
                 style={{
                   display: 'flex',
@@ -926,7 +926,7 @@ export const ResearchDashboard = ({ user, onRequireAuth, initialTicker }) => {
                 </div>
               </div>
 
-              {/* Pure Audited AI Analysis Content */}
+              {}
               <div
                 style={{
                   fontSize: '16px',
@@ -952,7 +952,7 @@ export const ResearchDashboard = ({ user, onRequireAuth, initialTicker }) => {
               </div>
             </div>
 
-            {/* Footer Verification Action Bar */}
+            {}
             <div
               style={{
                 borderTop: '2px solid #E2E8F0',
@@ -1008,18 +1008,18 @@ export const ResearchDashboard = ({ user, onRequireAuth, initialTicker }) => {
   );
 };
 
-// ResearchDashboard v1
 
-// Evidence tab v2
 
-// Bull/Bear tabs v3
 
-// Judge panel v4
 
-// PDF export v5
 
-// Read more modal v6
 
-// Animated research center v7
 
-// Research center dark theme v8
+
+
+
+
+
+
+
+

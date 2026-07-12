@@ -72,9 +72,9 @@ const researchRunSchema = new Schema(
   }
 );
 
-// Critical compound index for instant historical drift comparisons
+
 researchRunSchema.index({ userId: 1, ticker: 1, createdAt: -1 });
 
 export const ResearchRun = mongoose.model("ResearchRun", researchRunSchema);
 
-// ResearchRun model v1
+
