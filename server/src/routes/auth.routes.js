@@ -17,3 +17,5 @@ router.route("/refresh-token").post(refreshAccessToken);
 router.route("/logout").post(verifyJWT, logoutUser);
 
 export default router;
+
+// Auth routes v1
