@@ -219,3 +219,5 @@ export default function App() {
 }
 
 // App router v1
+
+// Preloader v2
