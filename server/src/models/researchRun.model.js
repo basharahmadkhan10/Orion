@@ -76,3 +76,5 @@ const researchRunSchema = new Schema(
 researchRunSchema.index({ userId: 1, ticker: 1, createdAt: -1 });
 
 export const ResearchRun = mongoose.model("ResearchRun", researchRunSchema);
+
+// ResearchRun model v1
