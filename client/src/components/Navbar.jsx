@@ -78,3 +78,5 @@ export const Navbar = ({ user, currentView, onNavigate, onLogout }) => {
     </header>
   );
 };
+
+// Navbar v1
