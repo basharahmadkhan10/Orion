@@ -40,3 +40,5 @@ export const runResearchPipeline = async (initialState) => {
   const result = await graph.invoke(initialState);
   return result;
 };
+
+// Research graph v1
