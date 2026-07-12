@@ -188,3 +188,5 @@ export const AuthPage = ({ onSuccess, onNavigate }) => {
 };
 
 // AuthPage v1
+
+// AuthPage watermarks v2
