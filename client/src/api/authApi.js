@@ -22,3 +22,5 @@ export const logoutUser = async () => {
   await apiClient.post("/auth/logout");
   setAccessToken(null);
 };
+
+// Auth API v1
