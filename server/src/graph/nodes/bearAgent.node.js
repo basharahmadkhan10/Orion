@@ -51,3 +51,5 @@ Return strictly valid JSON with no markdown formatting in this structure:
 };
 
 // Bear agent v1
+
+// Bear agent v2 - bullets
