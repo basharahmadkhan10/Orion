@@ -1007,3 +1007,5 @@ export const ResearchDashboard = ({ user, onRequireAuth, initialTicker }) => {
     </section>
   );
 };
+
+// ResearchDashboard v1
