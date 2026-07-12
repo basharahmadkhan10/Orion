@@ -1021,3 +1021,5 @@ export const ResearchDashboard = ({ user, onRequireAuth, initialTicker }) => {
 // Read more modal v6
 
 // Animated research center v7
+
+// Research center dark theme v8
