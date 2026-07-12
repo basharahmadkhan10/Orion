@@ -311,3 +311,5 @@ export const HeroSection = ({ onNavigate }) => {
     </div>
   );
 };
+
+// HeroSection v1
