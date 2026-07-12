@@ -239,3 +239,5 @@ export const WatchlistPage = ({ user, onNavigateToResearch }) => {
     </section>
   );
 };
+
+// WatchlistPage v1
