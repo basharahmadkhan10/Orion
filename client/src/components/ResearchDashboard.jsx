@@ -1009,3 +1009,5 @@ export const ResearchDashboard = ({ user, onRequireAuth, initialTicker }) => {
 };
 
 // ResearchDashboard v1
+
+// Evidence tab v2
