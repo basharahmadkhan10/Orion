@@ -9,9 +9,29 @@ import companyRouter from "./routes/company.routes.js";
 
 const app = express();
 
+const allowedOrigins = [
+  "http://localhost:5173",
+  "http://localhost:3000",
+];
+
+if (process.env.CORS_ORIGIN) {
+  const origins = process.env.CORS_ORIGIN.split(",").map(o => o.trim().replace(/\/$/, ""));
+  allowedOrigins.push(...origins);
+}
+
 app.use(
   cors({
-    origin: process.env.CORS_ORIGIN || "http://localhost:5173",
+    origin: (origin, callback) => {
+      if (!origin) return callback(null, true);
+      const normalizedOrigin = origin.replace(/\/$/, "");
+      const isAllowed = allowedOrigins.includes(normalizedOrigin) || 
+                        normalizedOrigin.endsWith(".vercel.app");
+      if (isAllowed) {
+        callback(null, true);
+      } else {
+        callback(new Error(`Origin ${origin} not allowed by CORS`));
+      }
+    },
     credentials: true,
   })
 );

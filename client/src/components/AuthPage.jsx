@@ -35,6 +35,7 @@ export const AuthPage = ({ onSuccess, onNavigate }) => {
 
   return (
     <div
+      className="auth-page-container"
       style={{
         padding: '140px 24px 80px',
         minHeight: '88vh',
@@ -79,6 +80,7 @@ export const AuthPage = ({ onSuccess, onNavigate }) => {
       </div>
 
       <div
+        className="auth-page-card"
         style={{
           backgroundColor: '#FFFFFF',
           border: '4px solid #11231E',
