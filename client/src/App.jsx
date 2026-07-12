@@ -35,23 +35,13 @@ const OrionPreloader = ({ onDone }) => {
   return (
     <div style={{
       position: 'fixed', inset: 0, zIndex: 9999,
-      background: 'linear-gradient(150deg, #CCFF7F 35%, #11231E 35.2%)',
+      background: 'linear-gradient(150deg, #CCFF7F 60%, #11231E 60.2%)',
       display: 'flex', flexDirection: 'column',
       alignItems: 'center', justifyContent: 'center',
       opacity: phase === 'exit' ? 0 : 1,
       transition: 'opacity 0.8s cubic-bezier(0.4,0,0.2,1)',
       overflow: 'hidden',
     }}>
-      {/* Animated grid lines */}
-      <div style={{
-        position: 'absolute', inset: 0,
-        backgroundImage: `
-          linear-gradient(rgba(204,255,127,0.06) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(204,255,127,0.06) 1px, transparent 1px)
-        `,
-        backgroundSize: '60px 60px',
-        animation: 'gridScroll 8s linear infinite',
-      }} />
 
       {/* Radial glow */}
       <div style={{
