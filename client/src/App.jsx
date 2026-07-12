@@ -35,7 +35,7 @@ const OrionPreloader = ({ onDone }) => {
   return (
     <div style={{
       position: 'fixed', inset: 0, zIndex: 9999,
-      background: 'linear-gradient(150deg, #CCFF7F 60%, #11231E 60.2%)',
+      background: 'linear-gradient(150deg, #CCFF7F 70%, #11231E 70.2%)',
       display: 'flex', flexDirection: 'column',
       alignItems: 'center', justifyContent: 'center',
       opacity: phase === 'exit' ? 0 : 1,
@@ -59,21 +59,31 @@ const OrionPreloader = ({ onDone }) => {
         animation: 'fadeSlideUp 0.6s ease both',
       }}>
         <div style={{
-          display: 'inline-flex', alignItems: 'center', gap: '16px',
+          backgroundColor: '#11231E',
+          padding: '12px 20px',
+          borderRadius: '8px',
+          display: 'inline-flex',
+          flexDirection: 'column',
+          alignItems: 'flex-start',
+          boxShadow: '0 4px 20px rgba(17, 35, 30, 0.2)',
           marginBottom: '32px',
         }}>
-          <div style={{
-            width: '52px', height: '52px', borderRadius: '14px',
-            backgroundColor: '#11231E',
-            display: 'flex', alignItems: 'center', justifyContent: 'center',
-            fontFamily: 'Space Grotesk, sans-serif', fontWeight: 700,
-            fontSize: '20px', color: '#CCFF7F',
-            boxShadow: '0 4px 20px rgba(17, 35, 30, 0.2)',
-          }}>AI</div>
           <span style={{
-            fontFamily: 'Space Grotesk, sans-serif', fontWeight: 700,
-            fontSize: '42px', color: '#11231E', letterSpacing: '-1px',
+            fontFamily: 'Space Grotesk, sans-serif',
+            fontWeight: 700,
+            fontSize: '26px',
+            lineHeight: 1,
+            color: '#CCFF7F',
+            letterSpacing: '0px',
           }}>ORION</span>
+          <span style={{
+            fontFamily: 'Space Grotesk, sans-serif',
+            fontSize: '10px',
+            fontWeight: 700,
+            letterSpacing: '2.5px',
+            color: '#FFFFFF',
+            marginTop: '4px',
+          }}>AGENCY</span>
         </div>
 
         <div style={{
