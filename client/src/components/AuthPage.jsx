@@ -186,3 +186,5 @@ export const AuthPage = ({ onSuccess, onNavigate }) => {
     </div>
   );
 };
+
+// AuthPage v1
