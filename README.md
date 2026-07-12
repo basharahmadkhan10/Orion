@@ -340,3 +340,5 @@ Env Variable: VITE_API_URL=https://your-backend.onrender.com/api/v1
 **Conversation ID**: 727460e4-192a-4981-935e-bd9529b82ed8
 
 <!-- Project initialized -->
+
+<!-- Full README added -->
