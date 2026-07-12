@@ -91,3 +91,5 @@ export const getResearchRunById = asyncHandler(async (req, res) => {
     .status(200)
     .json(new ApiResponse(200, run, "Research run details fetched successfully"));
 });
+
+// Research controller v1
